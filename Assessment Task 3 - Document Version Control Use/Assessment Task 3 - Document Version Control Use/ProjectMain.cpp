@@ -21,8 +21,16 @@ int main(int argc, char* argv[])
 	while (true)
 	{
 		cin >> input;
-		if (stoi(input) == i)
-			break;
+		bool isInt = true;
+
+		for (int i = 0; i < strlen(input.c_str()); i++)
+			if (!isdigit(input.c_str()[i]))
+				isInt = false;
+
+		if(isInt)
+			if (stoi(input) == i)
+				break;
+
 		cout << "try again" << endl;
 	}
 	cout << "Thats right!" << endl;
