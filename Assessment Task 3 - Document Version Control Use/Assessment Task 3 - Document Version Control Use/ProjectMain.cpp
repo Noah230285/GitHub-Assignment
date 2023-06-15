@@ -15,5 +15,17 @@ int main(int argc, char* argv[])
 
 	cout << "Hello " << input.c_str() << endl;
 
+	cout << "Im thinking of a number between 1 and 5, what am i thinking of?" << endl;
+
+	int i = rand() % 5 + 1;
+	while (true)
+	{
+		cin >> input;
+		if (stoi(input) == i)
+			break;
+		cout << "try again" << endl;
+	}
+	cout << "Thats right!" << endl;
+
 	return 0;
 }
