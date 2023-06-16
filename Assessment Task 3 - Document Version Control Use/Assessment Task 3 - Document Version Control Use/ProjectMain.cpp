@@ -17,6 +17,8 @@ int main(int argc, char* argv[])
 
 	cout << "Im thinking of a number between 1 and 5, what am i thinking of?" << endl;
 
+	srand(time(NULL));
+
 	int i = rand() % 5 + 1;
 	while (true)
 	{
